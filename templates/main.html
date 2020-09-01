@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Wind Output Energy Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+ <div class="login" style="padding-left: 20px;">
+	<!--<h1 class="navbar-brand" >Wind Output Energy Prediction</h1> -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <h1 class="navbar-brand">Wind Output Energy Prediction</h1>
+  </nav>
+    <form action="{{ url_for('predict')}}"method="post">
+      <div class="form-group">
+        <label >Wind Speed</label>
+        <input type="text" name="wind_speed" class="form-control" placeholder="Wind Speed in Km/h" required="required" />
+      </div>
+    	<div class="form-group">
+       <label >Wind Direction</label>
+       <input type="text" name="wind_direction" class="form-control" placeholder="Wind Direction w.r.t Turbine in Degree" required="required" />
+      </div>
+      <div class="form-group">
+        <label>Theoretical Power</label>
+        <input type="text" name="theoretical_power" class="form-control" placeholder="theoretical Power in KWh" required="required" />
+      </div>  
+		
+
+        <button type="submit" class="btn btn-primary">Predict</button>
+    </form>
+<!--
+  <form action="{{ url_for('predict')}}"method="post">
+  <div class="form-group">
+    <label >Wind Speed</label>
+    <input type="text" class="form-control" id="windspeed" name="wind_speed" placeholder="Enter Wind Speed" required="required" />
+  </div>
+  <div class="form-group">
+    <label >Wind Direction</label>
+    <input type="text" class="form-control" id="winddirection" name="wind_direction" placeholder="Wind Direction w.r.t Turbine" required="required" />
+  </div>
+  <div class="form-group">
+    <label>Theoretical Power</label>
+    <input type="text" class="form-control" id="theoreticalpower" name="theoretical_power" placeholder="Theoretical Power" required="required" />
+  </div>
+  <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+-->
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" style="background: #CCFFFF; position: fixed; bottom: 0; width:100%; text-align: center">© 2020 Made By:
+    <a href="https://www.linkedin.com/in/shagun-jain-32292a16b/" target="_blank style="color: #003366"> Shagun Jain</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>

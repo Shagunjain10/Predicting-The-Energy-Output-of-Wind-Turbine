@@ -11,12 +11,13 @@
 </head>
 
 <body>
- <div class="login" style="padding-left: 20px;">
-	<!--<h1 class="navbar-brand" >Wind Output Energy Prediction</h1> -->
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark"">
   <h1 class="navbar-brand">Wind Output Energy Prediction</h1>
   </nav>
+ 	<div class="login" style="padding-left: 20px; padding-top: 20px">
+	<!--<h1 class="navbar-brand" >Wind Output Energy Prediction</h1> -->
+
+  
     <form action="{{ url_for('predict')}}"method="post">
       <div class="form-group">
         <label >Wind Speed</label>
@@ -60,7 +61,7 @@
 <footer class="page-footer font-small blue">
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3" style="background: #CCFFFF; position: fixed; bottom: 0; width:100%; text-align: center">© 2020 Made By:
+  <div class="footer-copyright text-center py-3" style="background: #1d2124; position: fixed; bottom: 0; width:100%; color: white; text-align: center">© 2020 Made By:
     <a href="https://www.linkedin.com/in/shagun-jain-32292a16b/" target="_blank style="color: #003366"> Shagun Jain</a>
   </div>
   <!-- Copyright -->
